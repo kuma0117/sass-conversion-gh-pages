@@ -1,0 +1,326 @@
+// main SASS file
+@import "variable";
+@import "mixins";
+
+/***********************************************
+                NOTES
+light blue  #C7F7FF
+med blue    #89C0C9
+dark blue   #3a5E63
+light brown #C9A689
+dark brown  #7C593C
+light grey  #d4d4d4
+dark grey   #222
+
+                DEFAULTS
+***********************************************/
+
+*{
+    padding:0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+        
+    &:after,
+    &:before{
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+} 
+
+html{
+    font-size: 12px;
+    font-family: Helvetica, sans-serif; /* default for whole page */
+    line-height: 1.9;
+}
+h1, h2, h3, h4{
+    font-family: 'Roboto Slab', serif; /* serif for the headings */
+}
+ul{
+    list-style: none;
+}
+/***********************************************
+                SPECIAL
+***********************************************/
+
+.clearfix:after{
+    display:table;
+    clear: both;
+    content: "";
+}
+
+/***********************************************
+                LAYOUT
+***********************************************/
+.bg-header{
+    background-color: $color-white;
+    background-color:$color-dark-grey;
+    color: $color-dark-grey;
+    border-bottom:2rem solid $color-dark-grey;
+    border-top:3rem solid $color-light-brown;
+    position: absolute;
+
+    
+    &:before
+    &:after{
+          content:"";
+          position:absolute;
+          bottom:-1rem;
+          width:30%;
+          height:1rem;
+          background-color: $color-light-brown;
+    &:before{
+          left:0;
+    &:after{
+          right:0;
+
+
+        
+.bg-focal{
+    background-color: $color-light-brown;
+    color:$color-light-brown;
+}
+.bg-content1{
+    background-color: $color-light-brown;
+    color: $color-light-brown;
+}
+.bg-content2{
+    background-color: $color-light-blue;
+    color: $color-light-blue;
+}
+.bg-footer{
+    background-color:$color-light-blue;
+    color: $color-light-blue;
+}
+
+}
+        
+}
+
+}
+
+}
+
+
+        
+
+
+
+header{
+    width: 400px; /* default */
+    margin: 0 auto;
+    position: relative;
+
+    & h1{
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    & nav{
+        width: 100%;
+        
+        &>ul li{
+            width:100%;
+            float: none;
+        }
+
+    }
+}
+
+section.focal{
+    width: 400px; /* default */
+    margin: 0 auto;
+}
+section.content1{
+    padding: 2rem 0;
+}
+section.content2{
+    padding:2rem 0;    
+}
+.row{
+    clear: both;
+}
+.col-2{
+    width:50%;
+    float:left;
+    padding-bottom: 2rem;
+    border-left:1px solid $color-light-blue;
+    margin-bottom: 2rem;
+}
+footer .col-2:first-child{
+    border-left: 0;
+}
+footer{
+    padding:2rem 0;
+}
+footer p:last-child{
+}
+/***********************************************
+                NAVIGATION
+***********************************************/
+header nav{
+    padding:2rem 0;
+    clear: both;
+}
+header nav>ul>li>a{
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    color:$color-light-blue;    
+    font-size: 1.414rem;
+    letter-spacing: 0.25rem;
+    border:1px solid $color-light-blue; 
+    border-bottom: none;
+    padding:1.0rem 2rem;
+    line-height: 1;
+    background-color:$color-light-blue;
+}
+header nav>ul>li>a:hover{
+    font-weight: 700;
+    color:$color-light-blue;
+}
+
+/***********************************************
+                CONTENT
+***********************************************/
+header h1{
+    color: $color-light-blue;
+    letter-spacing: 0.1rem;
+    
+    & i.fa-lg{
+          display:block;
+          width: 25%;
+          float:left;
+          font-size: 7rem;
+          line-height: 12.7936rem;
+          color: $color-light-blue;
+        
+    & i.fa-lg ~ span{
+        float: right;
+        width: 75%;
+        font-size: 3.998rem;
+        /**
+        2 lines of 3.998 * 1.6 = 12.7936
+        **/
+        padding-left: 1rem;
+        text-align: right;
+}
+
+}
+
+}
+ 
+.focal h2{
+    font-size: 1.999rem;
+    line-height: 1.2;
+    padding: 2rem 2rem 1rem 2rem;
+}
+.focal .author{
+    font-size: 1rem;
+    padding: 0.2rem 2rem 2rem;
+}
+.content1 h3{
+         font-size:1.999rem;
+         padding: 0.2rem 2rem 2rem;
+    
+    i{
+         vertical-align:middle;
+         padding-right: 2rem;
+        
+    p{
+         font-size: 1.414rem;
+         padding: 0.5rem 2rem 2rem;
+}
+}
+}
+
+.content2 h3{ 
+         font-size: 0.234rem;
+         padding: 1rem 2rem 0.5rem;
+    
+    h4{
+         font-size: 1.999rem;
+         padding: 1rem 2rem 0rem;
+        
+    p{
+         font-size: 1.414rem;
+         padding: 0.5rem 2rem 1rem;
+            
+    li{
+         padding: 0.5rem 2rem;
+         font-size: 1.414rem;
+}
+}
+}
+}
+ 
+/***********************************************
+                FOOTER
+***********************************************/
+footer h4{
+         font-size: 1.414rem;
+         padding: 0.5rem 2rem;
+         color:$color-light-blue;
+    
+    &p{
+         font-size: 1rem;
+         padding: 0.5rem 2rem;
+         color: $color-light-blue;
+        
+    &.fa-circle{
+         color: $color-light-blue;
+        
+    &[lang=de]{
+         display:block;
+        
+    &[lang=en]
+    &[lang=ar]
+    &[lang=ru]{
+         display:none;
+}
+}
+}
+}
+}
+
+ 
+
+
+/***********************************************
+                MEDIA QUERIES
+***********************************************/
+
+@import "queries";
+
+
+.message {
+  border: 2px solid $color-dark-blue;
+  padding: 7px;
+  color: $color-dark-blue;
+}
+
+.success {
+  @extend .message;
+  border-color: $color-dark-grey;
+}
+
+.error {
+  @extend .message;
+  border-color: $color-med-blue;
+}
+
+.warning {
+  @extend .message;
+  border-color: $color-light-grey;
+    
+    
+    
+
+}
+
+
+/***********************************************
+            COMPRESSED QUERIES
+***********************************************/
+
+#main{color:#fff;background-color:#000}#main p{width:10em}.huge{font-size:10em;font-weight:bold;text-decoration:underline}
